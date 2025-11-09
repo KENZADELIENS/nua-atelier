@@ -63,10 +63,25 @@
     build: {
       target: 'esnext',
       outDir: 'dist',
+      assetsDir: 'assets',
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
     },
     server: {
       port: 3000,
       open: true,
     },
-    base: '/nua-atelier/', // Repository name
+    base: '/nua-atelier/'
+    build: {
+      assetsDir: 'assets',
+      outDir: 'dist',
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
+    }
   });
