@@ -64,12 +64,13 @@
       target: 'esnext',
       outDir: 'dist',
       emptyOutDir: true,
-      sourcemap: false,
-      minify: true
-    },
-    server: {
-      port: 3000,
-      open: true,
+      assetsDir: 'assets',
+      minify: true,
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
     },
     base: '/nua-atelier/'
   });
