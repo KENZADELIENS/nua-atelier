@@ -27,7 +27,7 @@ export function Layout() {
               to="/hub"
               className="cursor-pointer group"
             >
-              <h1 className="text-primary mb-0" style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', letterSpacing: '0.1em' }}>ATELIER NUA</h1>
+              <h1 className="text-primary mb-0" style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', letterSpacing: '0.1em' }}>NUA ATELIER</h1>
             </Link>
 
             {/* Desktop Navigation */}

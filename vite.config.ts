@@ -68,4 +68,5 @@
       port: 3000,
       open: true,
     },
+    base: '/nua-atelier/', // Repository name
   });
