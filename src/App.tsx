@@ -8,7 +8,7 @@ import { HubPage } from './components/HubPage';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/nua-atelier">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate to="/hub" replace />} />
