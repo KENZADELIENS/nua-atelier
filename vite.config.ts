@@ -63,12 +63,8 @@
     build: {
       target: 'esnext',
       outDir: 'dist',
-      assetsDir: 'assets',
-      rollupOptions: {
-        output: {
-          manualChunks: undefined
-        }
-      }
+      sourcemap: true,
+      minify: false
     },
     server: {
       port: 3000,
