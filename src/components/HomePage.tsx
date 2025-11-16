@@ -21,6 +21,14 @@ export function HomePage() {
 
     return () => clearInterval(interval);
   }, []);
+
+  const scrollToActuellement = () => {
+    const section = document.getElementById('actuellement-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div>
       {/* Hero Section */}
@@ -45,7 +53,10 @@ export function HomePage() {
             <div className="text-center">
               <div className="inline-block px-10 md:px-20 py-8 md:py-12 bg-ivoire-satine/95 backdrop-blur-sm">
                 <div className="text-noir-onyx mb-8" style={{ fontFamily: 'var(--font-sans)', fontSize: 'clamp(0.9rem, 2vw, 1.5rem)', letterSpacing: '-0.02em', fontWeight: 400 }}>ATELIER NUA</div>
-                <button className="px-8 md:px-10 py-3 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-opacity">
+                <button 
+                  onClick={scrollToActuellement}
+                  className="px-8 md:px-10 py-3 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
+                >
                   Découvrir
                 </button>
               </div>
@@ -71,7 +82,7 @@ export function HomePage() {
       </section>
 
       {/* Current Exhibitions */}
-      <section className="container mx-auto px-4 md:px-6 py-12 md:py-20">
+      <section id="actuellement-section" className="container mx-auto px-4 md:px-6 py-12 md:py-20">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 md:mb-12 gap-4">
           <h2 className="text-foreground">Actuellement</h2>
           <button className="px-6 md:px-8 py-2 rounded-full border border-gris-perle text-gris-charbon hover:border-primary hover:text-primary transition-all">
